@@ -32,3 +32,18 @@ At extreme noise limits, the baseline architecture lacked parametric capacity.
 To reproduce the V2 training pipeline and generate the ONNX export:
 ```python
 python train_brevitas_golden_v2.py
+
+###This repository contains the design, training, and hardware deployment pipeline for a Convolutional Neural Network (CNN) intended to replace traditional 5G physical layer receiver components (channel estimation and LMMSE equalization). 
+
+The model acts as a direct bit demapper for 16-QAM symbols transmitted over a dispersive 3GPP TDL-A fading channel. It is aggressively constrained using 8-bit Quantization-Aware Training (QAT) via Xilinx Brevitas, preparing it for hardware synthesis via the FINN compiler on a Zynq UltraScale+ ZCU104 FPGA.
+
+## 1. Environment Setup (Ubuntu 22.04/24.04)
+To replicate this environment, Python 3.10 is required. 
+
+```bash
+# Create and activate virtual environment
+python3.10 -m venv deeprx_env
+source deeprx_env/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
