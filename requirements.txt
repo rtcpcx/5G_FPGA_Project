@@ -1,0 +1,11 @@
+tensorflow==2.15.0
+sionna==0.18.0
+torch
+torchvision
+torchaudio
+brevitas==0.12.1
+onnx
+onnxscript
+onnxoptimizer
+onnxruntime
+matplotlib
