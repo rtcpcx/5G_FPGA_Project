@@ -1,4 +1,4 @@
-# 5G_FPGA_Project
+
 # End-to-End AI-Native 5G SISO Receiver
 
 This repository contains the design, training, and hardware deployment pipeline for a Convolutional Neural Network (CNN) intended to replace traditional 5G physical layer receiver components (channel estimation and LMMSE equalization). 
