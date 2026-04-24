@@ -74,4 +74,12 @@ torch.onnx.export(
     input_names=['input'],
     output_names=['output']
 )
-print("--- ALL DONE! deeprx_siso_8bit_GOLDEN_V2.onnx created ---")
+
+print("--- 4. Exporting V2 GOLDEN PTH ---")
+# 4a. Save just the state dictionary (Recommended, but requires the class definition to load)
+torch.save(model.state_dict(), "deeprx_siso_8bit_GOLDEN_V2.pth")
+
+# 4b. Optional: Save the entire model object (architecture + weights)
+# torch.save(model, "deeprx_siso_8bit_GOLDEN_V2_full.pth")
+
+print("--- ALL DONE! deeprx_siso_8bit_GOLDEN_V2 ONNX and PTH created ---")
